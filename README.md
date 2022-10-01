@@ -1,1 +1,1 @@
-## todo app.
+## Application for planning current events.
