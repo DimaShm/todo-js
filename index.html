@@ -11,21 +11,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
   </head>
   <body class="page">
-    <div id="todoapp" class="page__todoapp">
+    <section id="todoapp" class="page__todoapp">
       <h1 class="title">todos</h2>
       <header class="container">
-        <input class="checkbox check-all" type="checkbox">
+        <input id="toogle" class="checkbox" type="checkbox">
         <input class="new-todo" type="text" placeholder="what needs to be done?">
       </header> 
       <main>  
         <ul class="todo-list"></ul>
       </main>
       <footer class="container container--footer">
-        <span class="text todo-count">0</span>
+        <span class="text todo-count"></span>
         <span class="text" >item left</span>
-        <button class ="todo-clear todo-delete" hidden="true">clear completed</h2>
+        <button id="all" class ="container__button filter-button">all</h2>
+        <button id="active" class ="container__button filter-button">active</h2>
+        <button id="completed" class ="container__button filter-button">completed</h2>
+        <button id="clearBtn" class ="delete-button">clear completed</h2>
       </footer> 
-    </div>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>

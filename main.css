@@ -13,6 +13,17 @@
   width: 600px;
 }
 
+.title {
+  font-size: 90px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
 .container {
   position: relative;
   margin: 6px;
@@ -22,17 +33,17 @@
   background-color: #fff;
   border: 1px solid rgb(112, 111, 111);
   border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(112, 111, 111);;
+  box-shadow: 10px 10px 10px rgb(112, 111, 111);
 }
+
 .container--footer {
   position: relative;
   height: fit-content;
+  visibility: hidden;
 }
 
-.title {
-  font-size: 70px;
-  font-weight: 400;
-  text-align: center;
+.container__button {
+  margin: 15px 2px 0;
 }
 
 .new-todo {
@@ -50,47 +61,61 @@
   border: 1px solid rgb(112, 111, 111);
 }
 
-.check-all {
-  border: 1px solid #fff;
-}
-
-.check-all:active {
-  border: 1px solid rgb(112, 111, 111);
-}
-
-.todo-list {
-  list-style: none;
-  padding: 0;
-}
-
 .todo-label {
   padding: 10px 10px 10px 30px;
   font-size: 30px;
   color: rgb(112, 111, 111);
 }
 
-.todo-delete {
+.delete-button {
   position: absolute;
-  cursor: pointer;
+  display: inline-block;
+  visibility: hidden;
   right: 5px;
   padding: 10px;
   font-size: 20px;
-  background-color: lightgray;
   border-radius: 10px;
-}
+  transition: background-color 0.5s;
+} 
 
-.text {
-  display: inline-block;
-  padding: 10px 10px;
-  font-size: 24px;
+.delete-button:hover {
+  background-color: rgb(255, 0, 0);
   font-weight: bold;
 }
 
-.todo-clear {
-  visibility: hidden;
-  display: inline-block;
+.delete-button:active {
+ right: 2px;
+ background-color: rgb(190, 0, 0);
+ color: white;
+ box-shadow: 5px 5px 5px rgb(150, 0, 0);
 }
 
-.todo-delete:hover {
-  color:blue;
+.filter-button {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  width: 77px;
+  visibility: hidden;
+  transition: background-color 0.5s;
+}
+
+.filter-button:hover:not(:disabled) {
+  background-color: gray;
+  font-weight: bold;
+}
+
+.filter-button:active:not(:disabled) {
+  color: white;
+  padding: 6px;
+}
+
+.filter-button:disabled {
+  cursor: inherit;
+}  
+
+.text {
+  display: inline-block;
+  padding: 15px 10px 0 5px;
+  font-size: 24px;
+  font-weight: bold;
 }
