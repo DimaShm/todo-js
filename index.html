@@ -6,27 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
+    <link 
+      rel="stylesheet" 
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,400&display=swap" 
+      rel="stylesheet"
+    >
   </head>
   <body class="page">
-    <section id="todoapp" class="page__todoapp">
-      <h1 class="title">todos</h2>
+    <section id="todoapp" class="box page__todoapp">
+      <h1 class="page__title">todos</h2>
       <header class="container">
         <input id="toogle" class="checkbox" type="checkbox">
         <input class="new-todo" type="text" placeholder="what needs to be done?">
       </header> 
       <main>  
-        <ul class="todo-list"></ul>
+        <ul class="table todo-list"></ul>
       </main>
       <footer class="container container--footer">
         <span class="text todo-count"></span>
         <span class="text" >item left</span>
-        <button id="all" class ="container__button filter-button">all</h2>
-        <button id="active" class ="container__button filter-button">active</h2>
-        <button id="completed" class ="container__button filter-button">completed</h2>
-        <button id="clearBtn" class ="delete-button">clear completed</h2>
+        <div>
+          <button 
+            id="all" 
+            type="button"
+            class="btn btn-info btn-sm filter-button"
+          >
+            all
+          </button>
+          <button 
+            id="active" 
+            type="button"
+            class="btn btn-info btn-sm filter-button"
+          >
+            active
+          </button>
+          <button 
+            id="completed" 
+            type="button"
+            class="btn btn-info btn-sm filter-button"
+          >
+            completed
+          </button>
+        </div>
+        <button 
+          id="clearBtn"
+          type="button"
+          class ="btn btn-danger delete-button"
+        >
+          clear completed
+        </button>
       </footer> 
     </section>
     <script src="main.js"></script>

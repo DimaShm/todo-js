@@ -4,16 +4,14 @@
   font-family: Roboto, 'Courier New', Courier, monospace;
 }
 
-.page {
-  background-color: #eee;
-}
-
 .page__todoapp {
-  margin: 20px auto;
+  position: relative;
+  margin: 20px auto;  
   width: 600px;
+  animation: show 1.5s linear;
 }
 
-.title {
+.page__title {
   font-size: 90px;
   font-weight: 400;
   text-align: center;
@@ -26,24 +24,18 @@
 
 .container {
   position: relative;
-  margin: 6px;
   display: flex;
   align-items: center;
   padding: 5px;
   background-color: #fff;
   border: 1px solid rgb(112, 111, 111);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(112, 111, 111);
+  border-radius: 5px;
 }
 
 .container--footer {
   position: relative;
   height: fit-content;
   visibility: hidden;
-}
-
-.container__button {
-  margin: 15px 2px 0;
 }
 
 .new-todo {
@@ -62,60 +54,45 @@
 }
 
 .todo-label {
-  padding: 10px 10px 10px 30px;
+  padding: 8px 0 0 10px;
   font-size: 30px;
   color: rgb(112, 111, 111);
 }
 
 .delete-button {
   position: absolute;
-  display: inline-block;
   visibility: hidden;
   right: 5px;
-  padding: 10px;
-  font-size: 20px;
-  border-radius: 10px;
   transition: background-color 0.5s;
 } 
 
-.delete-button:hover {
-  background-color: rgb(255, 0, 0);
-  font-weight: bold;
-}
-
-.delete-button:active {
- right: 2px;
- background-color: rgb(190, 0, 0);
- color: white;
- box-shadow: 5px 5px 5px rgb(150, 0, 0);
-}
-
 .filter-button {
   cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-  width: 77px;
   visibility: hidden;
   transition: background-color 0.5s;
-}
-
-.filter-button:hover:not(:disabled) {
-  background-color: gray;
-  font-weight: bold;
-}
-
-.filter-button:active:not(:disabled) {
-  color: white;
-  padding: 6px;
 }
 
 .filter-button:disabled {
   cursor: inherit;
-}  
+} 
 
 .text {
   display: inline-block;
-  padding: 15px 10px 0 5px;
+  padding: 5px 15px 5px 0px;
   font-size: 24px;
   font-weight: bold;
+}
+
+@keyframes show {
+  0% {
+    top: -1000px;
+  }
+
+  50% {
+    top: 150px; 
+  }
+
+  100% {
+    top: 20px; 
+  }
 }

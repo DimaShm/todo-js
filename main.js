@@ -46,7 +46,8 @@ function createTodo (
       >
       <label class="todo-label" for=${labelId}>${value}</label>
       <button 
-        class="delete-button"
+        type="button"
+        class="btn btn-danger delete-button"
         style="visibility: visible"
       >
         delete
@@ -269,4 +270,3 @@ function filterBtnsVisibility() {
     allBtn.style = 'visibility: visible';
   }
 }
-
