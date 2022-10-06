@@ -243,8 +243,8 @@ function clearBtnVisibility() {
 
 function footerVisibility() {
   todos.length
-    ? footer.style = 'visibility: visible'
-    : footer.style = 'visibility: hidden';
+    ? footer.style = 'display: flex'
+    : footer.style = 'visibility: none';
 }
 
 function filterBtnsVisibility() {
@@ -254,7 +254,7 @@ function filterBtnsVisibility() {
   completedBtn.style = 'visibility: hidden';
   allBtn.style = 'visibility: hidden';
 
-  if (footer.style.visibility === 'hidden') {
+  if (footer.style.display === 'none') {
     return;
   }
 

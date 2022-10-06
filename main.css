@@ -4,10 +4,15 @@
   font-family: Roboto, 'Courier New', Courier, monospace;
 }
 
+.page {
+  background-color: rgb(247, 244, 244);
+}
+
 .page__todoapp {
   position: relative;
-  margin: 20px auto;  
+  margin: auto; 
   width: 600px;
+  box-shadow: 20px 20px 70px;
   animation: show 1.5s linear;
 }
 
@@ -28,14 +33,11 @@
   align-items: center;
   padding: 5px;
   background-color: #fff;
-  border: 1px solid rgb(112, 111, 111);
-  border-radius: 5px;
+  border-bottom: 2px solid rgb(247, 244, 244);
 }
 
 .container--footer {
-  position: relative;
-  height: fit-content;
-  visibility: hidden;
+  display: none;
 }
 
 .new-todo {
@@ -87,11 +89,9 @@
   0% {
     top: -1000px;
   }
-
   50% {
     top: 150px; 
   }
-
   100% {
     top: 20px; 
   }
