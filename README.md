@@ -1,3 +1,3 @@
 ## Application for planning current events.
 
-Were used: JavaScript, HTML, CSS, Boo
+Were used: JavaScript, HTML, CSS, Bootstrap.
